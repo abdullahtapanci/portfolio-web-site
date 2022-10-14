@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="abc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>    
+<body>
+
+    <div class="about">
+        <nav>
+            <div class="logo">
+                <div class="one">
+                    <div class="two">A</div>
+                </div>
+            </div>
+            <div class="container-links" id="links">
+                <ul id="ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#page-2">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#page-3">Contact</a></li>
+                </ul>
+            </div>
+            <div class="side-bar-container" onclick="side()">
+                <div class="line l-one" id="line-1"></div>
+                <div class="line l-two" id="line-2"></div>
+                <div class="line l-three" id="line-3"></div>
+            </div>
+            <script>
+                var links=document.getElementById("links")
+                var ul=document.getElementById("ul")
+                var line_1=document.getElementById("line-1")
+                var line_2=document.getElementById("line-2")
+                var line_3=document.getElementById("line-3")
+                function side(){
+                    if(links.style.display=="none"){
+                        links.style.display="block"
+                        line_1.style.transform="rotate(-45deg) translateY(3px)"
+                        line_2.style.opacity="0"
+                        line_3.style.transform="rotate(45deg) translateY(-3px)"
+                    }
+                    else{
+                        links.style.display="none"
+                        line_1.style.transform="rotate(0deg)"
+                        line_2.style.opacity="1"
+                        line_3.style.transform="rotate(0deg)"
+                    }
+
+                }
+            </script>
+        </nav>
+        <div class="about-header">
+            <h1>Hi I'm Abdullah Tapancı</h1>
+            <h3>A front-end Developer, artist based in Turkey</h3>
+            <p>
+                Pariatur ullamco mollit consectetur et velit reprehenderit consequat ea pariatur do proident et magna.
+                 Velit voluptate adipisicing dolore dolor aute pariatur non culpa excepteur. 
+                 Labore minim pariatur dolore tempor culpa sit cupidatat reprehenderit aute consectetur est. 
+                 Magna laboris veniam consequat elit ad duis in. 
+                 Commodo pariatur nisi voluptate cillum culpa anim magna sunt nisi ea. 
+                 Dolor reprehenderit et et Lorem ut magna duis officia.
+            </p>
+        </div>
+        <script>
+            window.sr=ScrollReveal();
+            sr.reveal(".about-header",{
+                origin:"left",
+                distance:"25rem",
+                duration:1000,
+                delay:50
+            })
+        </script>
+        <div class="my-img">
+            <img class="arts a-one" src="https://i.seadn.io/gae/BiI_rWwWifRDk3Ut2K8PCLTdwF1Ldo_VRHfIDFEasJGuTC8bGj0RUXJhFAVJnHienoInf0XcQWkOlv5Y7-z-6L0Wvhot3Bjehnr4?auto=format&w=1920">
+            <img class="arts a-two" src="https://i.seadn.io/gae/5KS-PyLiTjLpQP9TCTKXD3axVP0dDZ9lP07gq7srOjjkvvMxqiZrBVNkALqNTTMHlwRLjOAOBXVOeYTamEryRtQ6MH6520kv-vhNqw?auto=format&w=1920">
+            <img class="arts a-three" src="https://i.seadn.io/gae/KqZcmaJ80JeepikMNqaSLrDnJ2WSWhShc_eRkBuiJWpvzQrRu0P4obpd1tZWORBMtNGU5mU1A2mOKh-5BydfggPOJMBnNe8Nkasx?auto=format&w=1920">
+            <img class="arts a-four" src="https://i.seadn.io/gae/oZq62xt487EXIP4wNvE8JZqsxeymrE-6QsUoiLHQrKUei-fDqi8ztawxchf7h2X2IrYYNzZglef0eOKXdMHyDUhYz96QLiIjc0FahQ?auto=format&w=1920">
+        </div>
+    </div>
+    <script>
+        window.sr=ScrollReveal();
+        sr.reveal(".arts",{
+            origin:"right",
+            distance:"25rem",
+            duration:1000,
+            delay:50
+        })
+    </script>
+
+</body>
